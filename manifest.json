@@ -1,0 +1,22 @@
+{
+  "name": "82link",
+  "version": "0.0.0",
+  "description": "bypass",
+  "manifest_version": 3,
+  "browser_action": {
+    "default_icon": {
+      "16": "assets/icons/16.png",
+      "24": "assets/icons/24.png",
+      "32": "assets/icons/32.png"
+    },
+    "default_title": "82link"
+  },
+  "permissions": [],
+  "background": {
+    "scripts": [
+      "build/background.js"
+    ],
+    "persistent": true
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'"
+}

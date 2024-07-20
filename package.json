@@ -1,0 +1,22 @@
+{
+  "name": "82link",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "copy-html": "copyfiles -u 1 ./src/**/*.html ./dist/",
+    "copy-css": "copyfiles -u 1 ./src/**/*.css ./dist/",
+    "copy-js": "copyfiles -u 1 ./src/**/*.js ./dist/",
+    "clean": "tsc --build --clean",
+    "build": "npm run clean && tsc && npm run copy-html && npm run copy-css && npm run copy-js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "copyfiles": "^2.4.1",
+    "typescript": "^5.5.3",
+    "web-ext-types": "^3.2.1"
+  }
+}

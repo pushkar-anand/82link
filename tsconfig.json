@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2023",
+    "module": "commonjs",
+    "outDir": "dist",
+    "sourceMap": true,
+    "sourceRoot": "src",
+    "rootDir": "./src",
+    "allowJs": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "node_modules/web-ext-types"
+    ]
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/__test__/*",
+    "assets"
+  ]
+}
