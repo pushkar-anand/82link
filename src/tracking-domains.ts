@@ -11,8 +11,6 @@ const postMarkRedirectURL: RedirectHandler = (parsedURL) => {
 
     const parts = parsedURL.pathname.split("/")
 
-    console.log("parts", parts)
-
     if (parts.length >= 3) {
         const decodedUrl = decodeURIComponent(parts[2]);
         return `${parsedURL.protocol}${decodedUrl}`
