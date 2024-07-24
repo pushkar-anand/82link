@@ -1,22 +1,23 @@
 {
-  "name": "82link",
-  "version": "0.0.0",
-  "description": "bypass",
   "manifest_version": 3,
-  "browser_action": {
-    "default_icon": {
-      "16": "assets/icons/16.png",
-      "24": "assets/icons/24.png",
-      "32": "assets/icons/32.png"
-    },
-    "default_title": "82link"
-  },
-  "permissions": [],
+  "name": "82link",
+  "version": "1.0.0",
+  "description": "Removes tracking information from links for easier access",
+  "permissions": [
+    "webNavigation",
+    "tabs"
+  ],
   "background": {
-    "scripts": [
-      "build/background.js"
-    ],
-    "persistent": true
+    "service_worker": "background.js",
+    "type": "module"
   },
-  "content_security_policy": "script-src 'self'; object-src 'self'"
+  "host_permissions": [
+    "*://*.pstmrk.it/*"
+  ],
+  "icons": {
+    "16": "assets/icon16.jpeg",
+    "32": "assets/icon32.jpeg",
+    "48": "assets/icon48.jpeg",
+    "128": "assets/icon128.jpeg"
+  }
 }

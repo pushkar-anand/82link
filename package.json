@@ -6,8 +6,11 @@
     "copy-html": "copyfiles -u 1 ./src/**/*.html ./dist/",
     "copy-css": "copyfiles -u 1 ./src/**/*.css ./dist/",
     "copy-js": "copyfiles -u 1 ./src/**/*.js ./dist/",
+    "copy-assets": "copyfiles -u 1 ./assets/* ./dist/assets",
+    "copy-manifest": "copyfiles ./manifest.json ./dist/",
+    "copy": "npm run copy-html && npm run copy-css && npm run copy-js && npm run copy-assets && npm run copy-manifest",
     "clean": "tsc --build --clean",
-    "build": "npm run clean && tsc && npm run copy-html && npm run copy-css && npm run copy-js",
+    "build": "npm run clean && tsc && npm run copy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
